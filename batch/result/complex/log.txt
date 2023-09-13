@@ -1,7 +1,7 @@
 2023-08-04 13:22:09,728 Running colabfold 1.5.2 (63decf556dc2cabfb679917b86d5f3a526a481e7)
 2023-08-04 13:22:12,955 Running on GPU
 2023-08-04 13:22:13,423 Found 4 citations for tools or databases
-2023-08-04 13:22:13,423 Query 1/1: GPIcomplex (length 2496)
+2023-08-04 13:22:13,423 Query 1/1: GPITcomplex (length 2496)
 2023-08-04 13:22:18,156 Setting max_seq=508, max_extra_seq=2048
 2023-08-04 13:29:50,442 alphafold2_multimer_v3_model_1_seed_000 recycle=0 pLDDT=85.2 pTM=0.884 ipTM=0.868
 2023-08-04 13:36:35,093 alphafold2_multimer_v3_model_1_seed_000 recycle=1 pLDDT=87.6 pTM=0.904 ipTM=0.889 tol=0.954
