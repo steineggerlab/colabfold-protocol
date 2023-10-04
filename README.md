@@ -11,4 +11,6 @@ sh run_colabfold_GPIT_pair.sh
 sh run_colabfold_GPIT_monomer.sh
 # Validate the predicted structure by aligning to the experimental structure
 sh validate_colabfold_prediction.sh
+# Render the structure alignment
+open script/render_structure_alignment.cxc
 ```
