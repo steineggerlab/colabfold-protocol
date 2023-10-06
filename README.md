@@ -4,13 +4,13 @@
 ```sh
 cd batch
 # Predict the structure of GPI complex with alphafold_multimer_v3
-sh run_colabfold_GPIT_complex.sh
+sh script/run_colabfold_GPIT_complex.sh
 # Predict complex structure pairwisely
-sh run_colabfold_GPIT_pair.sh
+sh script/run_colabfold_GPIT_pair.sh
 # Run colabfold for each monomer
-sh run_colabfold_GPIT_monomer.sh
+sh script/run_colabfold_GPIT_monomer.sh
 # Validate the predicted structure by aligning to the experimental structure
-sh validate_colabfold_prediction.sh
-# Render the structure alignment
+sh script/validate_colabfold_prediction.sh
+# Render the structure alignment (ChimeraX required)
 open script/render_structure_alignment.cxc
 ```
