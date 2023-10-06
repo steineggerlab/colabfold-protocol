@@ -58,16 +58,32 @@ color #2/E cf_teal
 color #1/U cf_turquoise transparency 80
 color #2/A cf_turquoise
 
-# 4. Save
+# 4. Label
+# Chain names
+2dlab text 'PIGU' color black size 25 x .46 y .05
+2dlab text 'GPAA1' color black size 25 x .87 y .28
+2dlab text 'PIGT' color black size 25 x .70 y .82
+2dlab text 'PIGK' color black size 25 x .29 y .84
+2dlab text 'PIGS' color black size 25 x .20 y .41
+# Alignment
+2dlab text 'TM Score: 0.9852' color black size 25 x .10 y .25
+2dlab text 'RMSD: 1.87' color black size 25 x .10 y .21
+
+# 5. Save
 view
 zoom 1.6
 move y 10
 save batch/result/full_render.png supersample 18 width 1600 height 1600
 
-# 4.2 Save session
+# 5.2 Save session
 save batch/result/GPIT_rendering_session.cxs
 
 # 4.3 Color by pLDDT
 color #1 gainsboro transparency 90
 color bfactor #2 palette alphafold
-save result/plddt_render.png supersample 18 width 1600 height 1600
+# Delete TM score & RMSD
+2dlab delete #3.6
+2dlab delete #3.7
+# Add average pLDDT
+2dlab text 'Avg. pLDDT: 87.74' color black size 25 x .10 y .25
+save batch/result/plddt_render.png supersample 18 width 1600 height 1600
