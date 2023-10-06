@@ -16,6 +16,7 @@ open batch/ref/7w72.pdb
 open batch/result/rank1/GPITcomplex.pdb
 
 # 1.3 Rotate-translate structures
+# 4th value is for translation
 view matrix mod #1,0.488790866569,-0.603085213891,0.630468534338,-69.3279834505,0.313987021285,-0.551652926486,-0.771259211287,146.240202875,0.813563531252,0.575447872194,-0.0803967656813,-202.428553134
 view matrix mod #2,0.622852471525,0.778408779822,0.0783233789351,19.2509898714,0.733343433854,-0.546038926048,-0.40502948361,-24.7752147975,-0.272510894634,0.309711555454,-0.910942667721,9.6825874399
 
@@ -58,21 +59,26 @@ color #2/E cf_teal
 color #1/U cf_turquoise transparency 80
 color #2/A cf_turquoise
 
-# 4. Label
-# Chain names
-2dlab text 'PIGU' color black size 25 x .46 y .05
-2dlab text 'GPAA1' color black size 25 x .87 y .28
-2dlab text 'PIGT' color black size 25 x .70 y .82
-2dlab text 'PIGK' color black size 25 x .29 y .84
-2dlab text 'PIGS' color black size 25 x .20 y .41
-# Alignment
-2dlab text 'TM Score: 0.9852' color black size 25 x .10 y .25
-2dlab text 'RMSD: 1.87' color black size 25 x .10 y .21
-
-# 5. Save
+# Setup view
 view
 zoom 1.6
 move y 10
+save batch/result/full_render_no_label.png supersample 18 width 1600 height 1600
+
+# 4. Label
+# Chain names
+2dlab text 'PIGU (A)' color black size 24 x .43 y .05
+2dlab text 'PIGS (B)' color black size 24 x .15 y .42
+2dlab text 'PIGT (C)' color black size 24 x .70 y .82
+2dlab text 'PIGK (D)' color black size 24 x .24 y .84
+2dlab text 'GPAA1' color black size 24 x .87 y .28
+2dlab text '(E)' color black size 24 x .89 y .24
+
+# Alignment
+2dlab text 'TM Score: 0.9852' color black size 24 x .10 y .25
+2dlab text 'RMSD: 1.87' color black size 24 x .10 y .21
+
+# 5. Save
 save batch/result/full_render.png supersample 18 width 1600 height 1600
 
 # 5.2 Save session
@@ -82,8 +88,12 @@ save batch/result/GPIT_rendering_session.cxs
 color #1 gainsboro transparency 90
 color bfactor #2 palette alphafold
 # Delete TM score & RMSD
-2dlab delete #3.6
 2dlab delete #3.7
+2dlab delete #3.8
 # Add average pLDDT
-2dlab text 'Avg. pLDDT: 87.74' color black size 25 x .10 y .25
+2dlab text 'Avg. pLDDT: 87.74' color black size 24 x .10 y .23
 save batch/result/plddt_render.png supersample 18 width 1600 height 1600
+
+# 
+2dlab delete
+save batch/result/plddt_render_no_label.png supersample 18 width 1600 height 1600
