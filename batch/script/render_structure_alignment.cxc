@@ -1,0 +1,99 @@
+# ChimeraX script for rendering GPIT complex aligned with reference PDB structures
+# Created: 2023-10-04 07:48:13
+# Author: Hyunbin Kim (khb7840@gmail.com)
+
+# Chain list
+# PIGU, PIGS, PIGT, PIGK, GPAA1
+# 7w72.pdb: U, S, T, K, A
+# GPITcomplex.pdb: A, B, C, D, E
+
+cd /Users/hbk/Projects/Lab/05_ColabFold_Protocol/repo/colabfold-protocol/
+# 1. Files
+# 1.1 Open reference pdb as #1
+open batch/ref/7w72.pdb
+
+# 1.2 Open predicted structure as #2 
+open batch/result/rank1/GPITcomplex.pdb
+
+# 1.3 Rotate-translate structures
+# 4th value is for translation
+view matrix mod #1,0.488790866569,-0.603085213891,0.630468534338,-69.3279834505,0.313987021285,-0.551652926486,-0.771259211287,146.240202875,0.813563531252,0.575447872194,-0.0803967656813,-202.428553134
+view matrix mod #2,0.622852471525,0.778408779822,0.0783233789351,19.2509898714,0.733343433854,-0.546038926048,-0.40502948361,-24.7752147975,-0.272510894634,0.309711555454,-0.910942667721,9.6825874399
+
+# 2. Setting
+# 2.1 Set graphics setting - White background, soft lighting with silhouette 800x800
+lighting soft
+graphics silhouettes true
+set bgColor white
+windowsize 800 800
+
+# 2.2 Define color names
+colordef cf_dark_orange #FD5901
+colordef cf_orange #F78104
+colordef cf_yellow #FAAB36 
+colordef cf_turquoise #249EA0
+colordef cf_teal #008083
+
+# 3. Render
+# 3.0 hide atoms 
+hide #1 atoms; hide #2 atoms
+
+# 3.1 Show surfaces of reference structure #1 and ribbons of predicted structure
+show #1 surfaces
+show #2 ribbons
+
+# 3.2 Set color for each chain
+# PIGS
+color #1/S cf_dark_orange transparency 80
+color #2/B cf_dark_orange
+# PIGT
+color #1/T cf_orange transparency 80
+color #2/C cf_orange
+# PIGK
+color #1/K cf_yellow transparency 80
+color #2/D cf_yellow
+# GPAA1
+color #1/A cf_teal transparency 80
+color #2/E cf_teal
+# PIGU
+color #1/U cf_turquoise transparency 80
+color #2/A cf_turquoise
+
+# Setup view
+view
+zoom 1.6
+move y 10
+save batch/result/full_render_no_label.png supersample 18 width 1600 height 1600
+
+# 4. Label
+# Chain names
+2dlab text 'PIGU (A)' color black size 24 x .43 y .05
+2dlab text 'PIGS (B)' color black size 24 x .15 y .42
+2dlab text 'PIGT (C)' color black size 24 x .70 y .82
+2dlab text 'PIGK (D)' color black size 24 x .24 y .84
+2dlab text 'GPAA1' color black size 24 x .87 y .28
+2dlab text '(E)' color black size 24 x .89 y .24
+
+# Alignment
+2dlab text 'TM Score: 0.9852' color black size 24 x .10 y .25
+2dlab text 'RMSD: 1.87' color black size 24 x .10 y .21
+
+# 5. Save
+save batch/result/full_render.png supersample 18 width 1600 height 1600
+
+# 5.2 Save session
+save batch/result/GPIT_rendering_session.cxs
+
+# 4.3 Color by pLDDT
+color #1 gainsboro transparency 90
+color bfactor #2 palette alphafold
+# Delete TM score & RMSD
+2dlab delete #3.7
+2dlab delete #3.8
+# Add average pLDDT
+2dlab text 'Avg. pLDDT: 87.74' color black size 24 x .10 y .23
+save batch/result/plddt_render.png supersample 18 width 1600 height 1600
+
+# 
+2dlab delete
+save batch/result/plddt_render_no_label.png supersample 18 width 1600 height 1600
