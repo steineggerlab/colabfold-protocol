@@ -3,7 +3,7 @@
 ## Execution
 ```sh
 cd batch
-# Predict the structure of GPI complex with alphafold_multimer_v3
+# Predict the structure of GPIT complex with alphafold_multimer_v3
 sh script/run_colabfold_GPIT_complex.sh
 # Predict complex structure pairwisely
 sh script/run_colabfold_GPIT_pair.sh
