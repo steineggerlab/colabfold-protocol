@@ -1,0 +1,12 @@
+#PDBchain1	PDBchain2	TM1	TM2	RMSD	ID1	ID2	IDali	L1	L2	Lali
+ref/7w72.pdb:1,U	result/rank1/PIGU.pdb:1,A	0.9892	0.9892	0.82	1.000	1.000	1.000	420	420	420
+ref/7w72.pdb:1,S	result/rank1/PIGS.pdb:1,A	0.8846	0.8846	3.22	0.919	0.919	0.939	533	533	522
+ref/7w72.pdb:1,T	result/rank1/PIGT.pdb:1,A	0.9216	0.9216	1.73	0.932	0.932	0.982	527	527	500
+ref/7w72.pdb:1,K	result/rank1/PIGK.pdb:1,A	0.8303	0.6970	1.90	0.852	0.711	0.979	330	395	287
+ref/7w72.pdb:1,A	result/rank1/GPAA1.pdb:1,A	0.9798	0.9284	1.31	1.000	0.947	1.000	588	621	588
+ref/7w72.pdb:U:S:T:K:A	result/rank1/GPITcomplex.pdb:A:B:C:D:E	0.9851	0.9468	1.87	1.000	0.960	1.000	2398	2496	2398
+ref/7w72.pdb:U	result/rank1/GPITcomplex.pdb:A	0.9687	0.9687	1.38	1.000	1.000	1.000	420	420	420
+ref/7w72.pdb:S	result/rank1/GPITcomplex.pdb:B	0.9281	0.9281	2.46	1.000	1.000	1.000	533	533	533
+ref/7w72.pdb:T	result/rank1/GPITcomplex.pdb:C	0.9647	0.9647	1.80	1.000	1.000	1.000	527	527	527
+ref/7w72.pdb:K	result/rank1/GPITcomplex.pdb:D	0.9362	0.7887	1.88	0.997	0.833	0.997	330	395	330
+ref/7w72.pdb:A	result/rank1/GPITcomplex.pdb:E	0.9668	0.9167	1.61	1.000	0.947	1.000	588	621	588

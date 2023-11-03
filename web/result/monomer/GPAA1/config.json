@@ -2,10 +2,14 @@
     "num_queries": 1,
     "use_templates": false,
     "num_relax": 0,
+    "relax_max_iterations": 200,
+    "relax_tolerance": 2.39,
+    "relax_stiffness": 10.0,
+    "relax_max_outer_iterations": 3,
     "msa_mode": "mmseqs2_uniref_env",
     "model_type": "alphafold2_ptm",
     "num_models": 5,
-    "num_recycles": null,
+    "num_recycles": 3,
     "recycle_early_stop_tolerance": null,
     "num_ensemble": 1,
     "model_order": [
@@ -22,14 +26,15 @@
     "pair_mode": "unpaired_paired",
     "pairing_strategy": "greedy",
     "host_url": "https://api.colabfold.com",
+    "user_agent": "colabfold/google-colab-main",
     "stop_at_score": 100.0,
     "random_seed": 0,
     "num_seeds": 1,
     "recompile_padding": 10,
-    "commit": "63decf556dc2cabfb679917b86d5f3a526a481e7",
+    "commit": "8b7aa3f1f5b19357789a1b228a60efd3d38b72f3",
     "use_dropout": false,
     "use_cluster_profile": true,
     "use_fuse": true,
     "use_bfloat16": true,
-    "version": "1.5.2"
+    "version": "1.5.3"
 }
