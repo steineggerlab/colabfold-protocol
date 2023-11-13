@@ -9,7 +9,7 @@ do
     # Log
     echo "Running colabfold for $monomer"
     # Make directory
-    mkdir -p result/monomer/$monomer
+    mkdir -p batch/result/monomer/$monomer
     # Run colabfold with default model
-    colabfold_batch --num-recycle 3 --use-gpu-relax data/$monomer.fasta result/monomer/$monomer
+    colabfold_batch --num-recycle 3 --use-gpu-relax query/$monomer.fasta batch/result/monomer/$monomer
 done

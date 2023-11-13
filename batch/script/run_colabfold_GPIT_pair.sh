@@ -9,7 +9,7 @@ do
     # Log
     echo "Running colabfold for $PAIRFILE"
     # Make directory
-    mkdir -p result/pairs/$PAIRFILE
+    mkdir -p batch/result/pairs/$PAIRFILE
     # Run colabfold
-    colabfold_batch --num-recycle 3 --use-gpu-relax --model-type alphafold2_multimer_v3 data/$PAIRFILE.csv ./result/pairs/$PAIRFILE
+    colabfold_batch --num-recycle 3 --use-gpu-relax --model-type alphafold2_multimer_v3 data/$PAIRFILE.csv ./batch/result/pairs/$PAIRFILE
 done

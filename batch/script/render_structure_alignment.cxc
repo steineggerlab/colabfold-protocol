@@ -10,7 +10,7 @@
 cd /Users/hbk/Projects/Lab/05_ColabFold_Protocol/repo/colabfold-protocol/
 # 1. Files
 # 1.1 Open reference pdb as #1
-open batch/ref/7w72.pdb
+open ref/7w72.pdb
 
 # 1.2 Open predicted structure as #2 
 open batch/result/rank1/GPITcomplex.pdb
