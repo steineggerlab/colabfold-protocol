@@ -1,0 +1,17 @@
+parm your_pdb_dir/7BCQ_1_unrelaxed_rank_001_alphafold2_ptm_model_3_seed_000.pdb
+trajin your_pdb_dir/7BCQ_1_unrelaxed_rank_00?_alphafold2_ptm_model_?_seed_0??.pdb 1 1 1
+
+autoimage
+rms :41-491@CA
+strip !:41-491@CA
+average crdset trjavg 
+average average.pdb pdb
+createcrd CRD1
+run
+crdaction CRD1 rms ref trjavg
+crdaction CRD1 matrix covar name matcov @CA
+runanalysis diagmatrix matcov out evecs.dat  vecs 436 name myEvecs nmwiz nmwizvecs 3 nmwizfile helices.nmd nmwizmask :41-160,162-163,178-491@CA
+runanalysis modes eigenval name myEvecs out %eigenvec.dat
+crdaction CRD1 projection PCS modes myEvecs out project.dat beg 1 end 3 @CA
+run
+
