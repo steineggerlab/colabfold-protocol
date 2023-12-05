@@ -97,7 +97,8 @@ The results of the PCA can be found in [`batch/result/conformation/pca`](https:/
 - `%eigenvec.dat`: the amount of variance (%) captured by each PC in descending order (2nd column)
 
 ## How do I reference this work?
-- Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. Protocol Exchange (2023) doi: [10.21203/rs.3.pex-2490/v1](https://doi.org/10.21203/rs.3.pex-2490/v1)
+- Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. <br />
+  Protocol Exchange (2023) doi: [10.21203/rs.3.pex-2490/v1](https://doi.org/10.21203/rs.3.pex-2490/v1)
 
 - Mirdita M, Schütze K, Moriwaki Y, Heo L, Ovchinnikov S and Steinegger M. ColabFold: Making protein folding accessible to all. <br />
   Nature Methods (2022) doi: [10.1038/s41592-022-01488-1](https://www.nature.com/articles/s41592-022-01488-1)
