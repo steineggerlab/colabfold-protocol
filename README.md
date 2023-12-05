@@ -94,7 +94,7 @@ The provided [CPPTRAJ script](https://github.com/steineggerlab/colabfold-protoco
 
 The results of the PCA can be found in [`batch/result/conformation/pca`](https://github.com/steineggerlab/colabfold-protocol/tree/main/batch/result/conformation/pca). Some key outputs are: 
 - `project.dat`: The first three PCs for each model (you can ignore the last column (PC3) in this case)
-- `%eigenvec.dat`: the amount of variance (%) captured by each PC in descending order (2nd column)
+- `%eigenvec.dat`: the amount of variance captured by each PC in descending order (2nd column)
 
 ## How do I reference this work?
 - Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. <br />
