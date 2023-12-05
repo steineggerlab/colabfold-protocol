@@ -85,7 +85,7 @@ With the above setting, total of 80 structures are generated for each strategy, 
 ### Identifying alternative conformations 
 This part processes the positions of the amino-acids' alpha carbons under each model with PCA analysis using [CPPTRAJ](https://amberhub.chpc.utah.edu/cpptraj/). Its aim is to reduce the dimensionality from 451 parameters (# processed residues) to only two, which capture most of the conformational movements. One can identify multiple conformational states based on this PCA result, by selecting the representative structure furthest apart from each other along the PC1 and/or PC2 axis (depending on the amount of variance captured by each PC). 
 
-The provided [CPPTRAJ script](https://github.com/steineggerlab/colabfold-protocol/blob/main/batch/script/asct2_pca.in) performs the following steps. This script is largely based on the [script](https://github.com/delalamo/af2_conformations) provided by [del Alamo et al](https://elifesciences.org/articles/75751).
+The provided [CPPTRAJ script](https://github.com/steineggerlab/colabfold-protocol/blob/main/batch/script/asct2_pca.in) (run with this [bash script](https://github.com/steineggerlab/colabfold-protocol/blob/main/batch/script/run_cpptraj_asct2.sh)) performs the following steps. This script is largely based on the [script](https://github.com/delalamo/af2_conformations) provided by [del Alamo et al](https://elifesciences.org/articles/75751).
 1. Trim off the detected low-pLDDT stretches to reduce noise in the PCA.
 2. Compute the average position of the remaining 451 alpha carbons across the 80 protein models and deduct it from each of the models.
 3. Compute the covariance matrix of the 451 updated positions.
