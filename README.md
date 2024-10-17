@@ -1,7 +1,7 @@
 # Easy and accurate protein structure prediction using ColabFold
 A step-by-step protocol for predicting protein mono-, multi-mer structures and conformations using ColabFold/AlphaFold2
 
-[Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. Protocol Exchange (2023) doi: 10.21203/rs.3.pex-2490/v1](https://protocolexchange.researchsquare.com/article/pex-2490/v1)
+[Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. Nature Protocols (2024) doi: 10.1038/s41596-024-01060-5](https://www.nature.com/articles/s41596-024-01060-5)
 
 
 <p align="center"><img src="https://github.com/steineggerlab/colabfold-protocol/raw/main/.github/ColabFold_Marv_Logo.png" height="250"/></p>
@@ -98,7 +98,7 @@ The results of the PCA can be found in [`batch/result/conformation/pca`](https:/
 
 ## How do I reference this work?
 - Kim G, Lee S, Levy Karin E, Kim H, Moriwaki Y, Ovchinnikov S, Steingger M and Mirdita M. Easy and accurate protein structure prediction using ColabFold. <br />
-  Protocol Exchange (2023) doi: [10.21203/rs.3.pex-2490/v1](https://doi.org/10.21203/rs.3.pex-2490/v1)
+  Nature Protocols (2024) doi: [10.1038/s41596-024-01060-5](https://www.nature.com/articles/s41596-024-01060-5)
 
 - Mirdita M, Schütze K, Moriwaki Y, Heo L, Ovchinnikov S and Steinegger M. ColabFold: Making protein folding accessible to all. <br />
   Nature Methods (2022) doi: [10.1038/s41592-022-01488-1](https://www.nature.com/articles/s41592-022-01488-1)
@@ -109,6 +109,6 @@ The results of the PCA can be found in [`batch/result/conformation/pca`](https:/
   Evans et al. "Protein complex prediction with AlphaFold-Multimer." <br />
   biorxiv (2021) doi: [10.1101/2021.10.04.463034v1](https://www.biorxiv.org/content/10.1101/2021.10.04.463034v1)
 - If you are using **RoseTTAFold**, please also cite: <br />
-  Minkyung et al. "Accurate prediction of protein structures and interactions using a three-track neural network." <br />
+  Baek et al. "Accurate prediction of protein structures and interactions using a three-track neural network." <br />
   Science (2021) doi: [10.1126/science.abj8754](https://doi.org/10.1126/science.abj8754)
 
